@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding:1rem;
+    background-color:antiquewhite;
+}
+.nav-mid{
+    display: flex;
+    column-gap: 1rem;
+}
+.nav-end{
+    display: flex;
+    column-gap: 1rem;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.flight-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.flight-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.flight-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flight-segment {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.flight-segment img {
+    height: 20px;
+}
+
+.flight-time, .flight-duration, .flight-stop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flight-price {
+    text-align: right;
+}
+
+.flight-price button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flight-price button:hover {
+    background-color: #218838;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-fields {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-size: 12px;
+    color: #666;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #218838;
+}
+
+.passenger-class {
+    position: relative;
+}
+
+.passenger-class button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.quantity-controls span {
+    margin: 0 10px;
+}
+
+.travel-class {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.travel-class div {
+    display: flex;
+    gap: 10px;
+}
+
+.travel-class button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.travel-class button.active {
+    border-color: #28a745;
+    color: #28a745;
+}

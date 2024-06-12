@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flights.css">
+</head>
+<body>
+    <div>
+        <nav-bar class="nav-bar">
+          <div>
+            <!-- <img/> -->
+            Logo
+          </div>  
+          <div class="nav-mid">
+            <a href="index.html"><div>Home</div></a>
+            <div>About</div>
+            <div>My Bookings</div>
+          </div>
+          <div class="nav-end">
+            <div>Login</div>
+            <div>Sign Up</div>
+          </div>
+        </nav-bar>
+        <form class="search-form" onsubmit="return validateForm()">
+            <div class="search-fields">
+                <select id="trip-type" class="trip-select">
+                    <option value="round-trip">Round-trip</option>
+                    <option value="one-way">One-way</option>
+                </select>
+                <div class="passenger-class" id="passenger-class-dropdown">
+                    <button type="button" onclick="togglePassengerClass()">1 Guest Economy</button>
+                    <div id="passenger-class-menu" class="dropdown-menu">
+                        <div class="dropdown-item">
+                            <span>Adult</span>
+                            <span>Above 12 years</span>
+                            <div class="quantity-controls">
+                                <button type="button" onclick="decrement('adults')">-</button>
+                                <span id="adults-count">1</span>
+                                <button type="button" onclick="increment('adults')">+</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <span>Child</span>
+                            <span>2 - 11 years on travel date</span>
+                            <div class="quantity-controls">
+                                <button type="button" onclick="decrement('children')">-</button>
+                                <span id="children-count">0</span>
+                                <button type="button" onclick="increment('children')">+</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <span>Infant</span>
+                            <span>Below 2 years on travel date</span>
+                            <div class="quantity-controls">
+                                <button type="button" onclick="decrement('infants')">-</button>
+                                <span id="infants-count">0</span>
+                                <button type="button" onclick="increment('infants')">+</button>
+                            </div>
+                        </div>
+                        <div class="travel-class">
+                            <span>Travel class</span>
+                            <div>
+                                <button type="button" onclick="selectClass('economy')">Economy</button>
+                                <button type="button" onclick="selectClass('premium-economy')">Premium Economy</button>
+                                <button type="button" onclick="selectClass('business')">Business/Premium Flatbed</button>
+                                <button type="button" onclick="selectClass('first')">First Class</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" id="promo-code" placeholder="Promo code">
+                <label>
+                    <input type="checkbox" id="redeem-points"> Redeem AirAsia points
+                </label>
+            </div>
+            <div class="location-fields">
+                <div class="field">
+                    <label for="location">Flying from</label>
+                    <input id="location" type="text" placeholder="New Delhi">
+                </div>
+                <div class="field">
+                    <label for="destination">Going to</label>
+                    <input id="destination" type="text" placeholder="Destination">
+                </div>
+            </div>
+            <div class="date-fields">
+                <div class="field">
+                    <label for="start-date">Depart</label>
+                    <input id="start-date" type="date">
+                </div>
+                <div class="field" id="return-date-field">
+                    <label for="end-date">Return</label>
+                    <input id="end-date" type="date">
+                </div>
+            </div>
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+        <main-content>
+            <div id="flight-results" class="flight-results"></div>            
+        </main-content>
+        <footer>
+
+        </footer>
+    </div>
+    
+    <script src="index.js"></script>
+    <script src="flights.js"></script>
+</body>
+</html>
+
+    
